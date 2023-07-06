@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>retrive_dept</h1>
+        <form action="" method="POST">
+            {% csrf_token %}
+            <label for="dn">deptno :</label>
+           <!----<select name="dn" id="dn" multiple>
+                <option value="{{ro.deptno}}">-----</option>
+               
+            </select>-->
+            {% for ro in rdo %}
+            <!---- <option value="{{ro.deptno}}">{{ro.deptno}}</option>-->
+             <input type="checkbox" name="dn" id="dn" value="{{ro.deptno}}">{{ro.deptno}}
+             {% endfor %}
+            <br><br>
+            <input type="submit" value="display_dept">
+        </form>
+    </center>
+</body>
+</html>

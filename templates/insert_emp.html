@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>insert_emp</h1>
+        <form action="" method="POST">
+            {% csrf_token %}
+            <label for="dn">deptno</label>
+            <select name="dn" id="dn">deptno
+            <option value="{{i.deptno}}">---------</option>
+            {% for i in dn %}
+               <option value="{{i.deptno}}">{{i.deptno}}</option>
+            {% endfor %} <br><br>
+        </select>
+        <br><br>
+
+            <label for="en">empno</label>
+            <input type="number" name="en" id="en"><br><br>
+
+            <label for="ena">ename</label>
+            <input type="text" name="ena" id="ena"><br><br>
+
+            <label for="j">job</label>
+            <input type="text" name="j" id="j"><br><br>
+
+            <label for="mg">mgr</label>
+            <input type="text" name="mg" id="mg"><br><br>
+
+            <label for="hd">hiredate</label>
+            <input type="date" name="hd" id="hd"><br><br>
+
+            <label for="s">sal</label>
+            <input type="number" name="s" id="s"><br><br>
+
+            <label for="c">comm</label>
+            <input type="number" name="c" id="c"><br><br>
+
+            <input type="submit" value="insert_emp">
+
+
+        </form>
+    </center>
+</body>
+</html>

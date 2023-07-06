@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>display_emp</h1>
+        <table border="3px">
+            <tr>
+                <th>deptno</th>
+                <th>empno</th>
+                <th>ename</th>
+                <th>job</th>
+                <th>sal</th>
+                <th>mgr</th>
+                <th>comm</th>
+                <th>hiredate</th>
+            </tr>
+            {% for i in RWOS %}
+            <tr>
+                <td>{{i.deptno}}</td>
+                <td>{{i.empno}}</td>
+                <td>{{i.ename}}</td>
+                <td>{{i.job}}</td>
+                <td>{{i.sal}}</td>
+                <td>{{i.mgr}}</td>
+                <td>{{i.comm}}</td>
+                <td>{{i.hiredate}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </center>
+</body>
+</html>
